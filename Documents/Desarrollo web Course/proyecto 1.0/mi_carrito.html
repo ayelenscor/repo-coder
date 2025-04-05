@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <h1>Macos</h1>
+        <p>Bazar y Regaleria</p>
+        <div class="search-container">
+            <input type="text" id="searchBox" placeholder="Buscar productos...">
+            <button onclick="searchFunction()">Buscar</button>
+        </div>
+        <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="mi_carrito.html">Mi Carrito</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Aquí puedes ver los articulos seleccionados</h2>
+            <p>Elimina o modifica un articulo.</p>
+        </section>
+        <div class="cart-section">
+    
+            <ul id="cart-items" class="cart-items">
+            </ul>
+
+            <div class="product-list">
+                <ul id="product-list">
+                  <li>
+                    <img src="Img/botella.jpg" alt="Producto 1" class="product-image">
+                    Botella - $7.500
+                    <button onclick="deleteToCart('Producto 1', 19.99, 'product1.jpg')">Eliminar</button>
+                  </li>
+                  <li>
+                    <img src="Img/taza2.webp" alt="Producto 2" class="product-image">
+                    Taza - $4.500
+                    <button onclick="deleteToCart('Producto 2', 9.99, 'product2.jpg')">Eliminar</button>
+                  </li>
+                </ul>
+              </div>
+          
+            <div id="cart-total" class="cart-total">
+              <strong>Total: $<span id="total-price">12.000</span></strong>
+
+            </div class="clearCart">
+            <button onclick="clearCart()">Vaciar carrito</button>
+          </div>
+    </main>
+
+</body>
+
+    <footer>
+        <p>© 2025 Macos. Todos los derechos reservados.</p>
+    </footer>
+
+</html>
